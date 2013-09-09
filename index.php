@@ -5,7 +5,7 @@
 			<section id="mainstay" class="col-md-8">
 				<div class="well fade in">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-						欢迎使用由 <a target="_blank" href="http://www.yeahzan.com/">佚站互联</a> 提供的 <strong>Zanblog主题</strong>，Zanblog 2.0.0 正式发布，欢迎下载使用:)。Zanblog官方群：223133969
+						欢迎使用由 <a target="_blank" href="http://www.yeahzan.com/">佚站互联</a> 提供的 <strong>Zanblog主题</strong>，Zanblog 2.0 正式发布，欢迎下载使用:)。Zanblog官方群：223133969
 				</div>
 				<figure class="slide hidden-xs">
 				  <?php echo do_shortcode("[metaslider id=411]"); ?>
