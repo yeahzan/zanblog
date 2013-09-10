@@ -1,3 +1,11 @@
+/**
+ * Functionality specific to Zanblog.
+ *
+ * Provides helper functions to enhance the theme experience.
+ *
+ * Website: www.yeahzan.com
+ */
+
 jQuery(function () {
 
 	topFixed();
@@ -9,9 +17,9 @@ jQuery(function () {
 
     jQuery('#myTab a:last').tab('show');
 
-});
-
-    //导航栏是否固定
+    /**
+	 * Navbar fixed.
+	 */
     function topFixed() {
 
     	zanHeader = jQuery("#zan-header");
@@ -33,7 +41,9 @@ jQuery(function () {
 		});
 	}
 
-	//导航栏下拉框
+	/**
+	 * Navbar submenu dropdown.
+	 */
 	function dropDown() {
 
 		dropDownLi = jQuery("li.dropdown");
@@ -45,6 +55,9 @@ jQuery(function () {
 		});
 	}
 
+	/**
+	 * Sidebar panel toggle.
+	 */
 	function panelToggle () {
 		
 		var toggleBtn = jQuery(".panel-toggle");
@@ -69,6 +82,9 @@ jQuery(function () {
 		});
 	}
 
+	/**
+	 * Sidebar panel close.
+	 */
 	function panelClose() {
 
 		var closeBtn = jQuery(".panel-remove");
@@ -82,6 +98,9 @@ jQuery(function () {
 		});
 	}
 
+	/**
+	 * Loading btn action.
+	 */
 	function btnLoading() {
 
 		var loadBtn = jQuery("#load-more");
@@ -95,7 +114,9 @@ jQuery(function () {
 		})
 	}
 
-	//预加载图片
+	/**
+	 * Preload background img.
+	 */
 	function preLoadImg() {
 
 		function preloadImages(array) {
@@ -110,10 +131,10 @@ jQuery(function () {
 		}
 
 		var imageURLs = [
-		    "ui/images/arrow_hover.png"
+		    "wp-content/themes/zanblog/ui/images/arrow_hover.png"
 		];
 
 		preloadImages(imageURLs);
 
 	}
-
+});

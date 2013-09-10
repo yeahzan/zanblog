@@ -1,12 +1,18 @@
 <?php
-/*
-Template Name: content-download
-*/
+	/*
+	Template Name: 内容下载页面
+	*/
 ?>
 
 <?php get_header(); ?>
 <div id="zan-bodyer">
 	<div class="container">
+		<?php 
+	    	if(function_exists('bcn_display')) {
+	        	echo '<i class="icon-home"></i> ';
+	        	bcn_display();
+	    	}
+	    ?>
 		<div class="bs-masthead">
 			<h1>Zanblog</h1>
 			<p>Zanblog是由佚站互联制作的基于Bootstrap3.0的WordPress主题，采用Bootstrap3.0的扁平化设计风格，提供免费下载，希望大家能够喜欢:)<p>

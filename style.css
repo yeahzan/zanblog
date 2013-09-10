@@ -4,19 +4,11 @@ Theme URI: http://www.yeahzan.com/zanblog
 Description: 基于Bootstrap3.0的WordPress主题
 Author: 佚站互联
 Author URI: http://www.yeahzan.com/
-Version: 2.0.0
+Version: 2.0.1
 Tags: Bootstrap3, 扁平化设计, 精致简约
 */
 
-
-/*引入其他样式文件*/
-@import url('ui/css/bootstrap.css');
-@import url('ui/css/font-awesome.min.css');
-@import url('ui/css/flat/red.css');
-
-
 /*共通*/
-
 ::selection {
 	background: #d9534f;
 	color: #ffffff;
@@ -42,12 +34,7 @@ ul{
 	list-style-type: none;   
 }
 
-img{
-	border:0 none;
-}
-
 /* 限定a元素颜色 */
-
 .panel-heading{
 	color: #888;
 }
@@ -63,6 +50,14 @@ img{
 .panel .tab-content a:hover,
 .panel .nav-pills a:hover {
 	color: #ffffff;
+}
+
+.panel .tab-content ul.children a {
+	padding: 20px;
+}
+
+.panel .tab-content ul.children a:hover {
+	color: #d2322d;
 }
 
 div[class*="danger"] a {
@@ -90,7 +85,6 @@ div[class*="warning"] a:hover {
 }
 
 /* 限定badge类颜色 */
-
 div[class*="danger"] .badge {
 	background-color: #d9534f;
 }
@@ -174,7 +168,6 @@ div[class*="success"] .badge {
  }
 
  /*搜索框*/
-
  .search{
  	float: right;	
  	padding: 10px 0;
@@ -185,9 +178,11 @@ div[class*="success"] .badge {
  }
 
 /*幻灯片*/
+.flexslider {
+	margin-bottom: 20px !important;
+}
 
 .slide{
-	margin-bottom: 30px;
 	border-radius: 4px;
 
 	-webkit-box-shadow: 0 0px 5px #c2c2c2;
@@ -230,12 +225,12 @@ div[class*="success"] .badge {
 }
 
 /*文章*/
-
 .article{
 	position: relative;
 	margin-bottom: 30px;
 	padding-bottom: 20px;
 }
+
 /*文章－日期*/
 .data-article{
 	background-color: #d9534f;
@@ -270,6 +265,9 @@ div[class*="success"] .badge {
 }
 
 /*文章－标题*/
+.title-article {
+	padding: 20px 15px 0px 15px;
+}
 
 .title-article h1{
 	font-size: 32px;
@@ -292,7 +290,6 @@ div[class*="success"] .badge {
 }
 
 /*文章－标签*/
-
 .label {
 	margin-right: 5px;
 }
@@ -343,7 +340,6 @@ div[class*="success"] .badge {
 }
 
 /*文章－更多*/
-
 .btn-danger .badge {
 	background-color: #FFF;
 	color: #d9534f;
@@ -352,13 +348,11 @@ div[class*="success"] .badge {
 }
 
 /*异步加载*/
-
 #infscr-loading img {
 	display: none !important;
 }
 
 /*侧边栏共通样式*/
-
 .panel-heading {
 	border-bottom: none;
 	font-size: 14px;
@@ -439,7 +433,6 @@ ul.pills-zan li {
 }
 
 /*侧边栏－标签*/
-
 .pills-danger li.active > a,
 .pills-danger li.active > a:hover {
 	background-color: #d9534f !important;
@@ -470,7 +463,6 @@ ul.pills-zan li {
 }
 
 /*侧边栏－评论*/
-
 .new-comments ul li{
 	background: url("ui/images/avatar.png") no-repeat left;
 	min-height: 31px;
@@ -543,14 +535,12 @@ img.avatar:hover {
 }
 
 /*友情链接*/
-
 .blogroll  li{
 	margin-bottom: 10px;
 
 }
 
 /*页脚*/
-
 #zan-footer {
 	display: block;
 	text-align: center;
@@ -588,7 +578,6 @@ img.avatar:hover {
 
 
 /*下载页面*/
-
 .bs-masthead {
     padding-bottom: 100px;
     padding-top: 100px;
@@ -633,7 +622,6 @@ img.avatar:hover {
 }
 
 /* wk 自定义 */
-
 body .wk-slideshow-default > div:hover .next, 
 body .wk-slideshow-default > div:hover .prev {
 	top: 50%;
@@ -666,7 +654,6 @@ body .wk-slideshow-default > div .prev {
 }
 
 /* 多说评论框 */
-
 #ds-thread #ds-reset .ds-post-button {
 	background-image: none !important;
 	background-color: #d9534f !important;
@@ -686,7 +673,22 @@ body .wk-slideshow-default > div .prev {
 }
 
 /* 百度统计 */
-
 embed[name*="Holmes"] {
 	padding-top: 10px;
+}
+
+/* <IE9 兼容样式 */
+html.ie body,
+html.ie #mainstay,
+html.ie #sidebar,
+html.ie #zan-footer {
+	background: url("ui/images/bg.jpg");
+}
+
+#ie-warning {
+	display: none;
+}
+
+html.ie #ie-warning {
+	display: block;
 }
