@@ -1,6 +1,10 @@
-zanblog
-=======
+# Zanblog Theme
 
-Bootstrap3 &amp; WordPress blog theme by Yeahzan.
+- **LIVE DEMO:** [http://www.yeahzan.com/](http://www.yeahzan.com/)
+- **It's free & supported**
 
-http://www.yeahzan.com/
+******************
+
+## LICENSE
+
+Licensed under MIT.
