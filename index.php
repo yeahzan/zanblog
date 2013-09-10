@@ -9,7 +9,7 @@
 				</div>
 				<div class="well fade in">
 					<button type="button" class="close" data-dismiss="alert">&times;</button>
-						欢迎使用由 <a target="_blank" href="http://www.yeahzan.com/">佚站互联</a> 提供的 <strong>Zanblog主题</strong>，目前最新版本 V2.0.1 ，欢迎下载使用 :)。Zanblog官方群：223133969
+						欢迎使用由 <a target="_blank" href="http://www.yeahzan.com/">佚站互联</a> 提供的 <strong>Zanblog主题</strong>，目前最新版本 V2.0.1 ，请及时更新 <i class="icon icon-smile"></i> Zanblog官方群：223133969
 				</div>
 				<?php if(dynamic_sidebar('幻灯片')) {?>
 					  <?php echo do_shortcode("[metaslider id=411]"); ?>
