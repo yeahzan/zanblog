@@ -1,5 +1,13 @@
 <!DOCTYPE html>
-<html lang='cn'>
+<!--[if IE 7]>
+<html class="ie ie7" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if IE 8]>
+<html class="ie ie8" <?php language_attributes(); ?>>
+<![endif]-->
+<!--[if !(IE 7) | !(IE 8)  ]><!-->
+<html <?php language_attributes(); ?>>
+<!--<![endif]-->
 <head>
 <meta charset="utf-8">
 <!-- 设置标题 -->
@@ -47,19 +55,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- 引入style.css -->
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/style.css" /> 
-
-<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-<!--[if lt IE 9]>
-  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
-
-<?php wp_enqueue_script("jquery"); ?>
 <?php wp_head(); ?>
 
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements Responsive IE8-->
+<!--[if lt IE 9]>
+  <script src="<?php echo get_template_directory_uri(); ?>/ui/js/modernizr.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/ui/js/respond.min.js"></script>
+<![endif]-->
+
 </head>
-<body class="">
+<body <?php body_class(); ?>>
 <header id="zan-header" class="navbar navbar-inverse bs-docs-nav">
   <nav class="container">
     <a href="<?php echo site_url(); ?>"><div class="navbar-brand"></div></a>
@@ -74,16 +79,18 @@
         $defaults = array(
           'container' => '',
           'menu_class' => 'nav navbar-nav',
-          'walker' => new My_Walker_Nav_Menu('')
+          'walker' => new ZanblogMenu('')
         );
-        wp_nav_menu( $defaults );
+        wp_nav_menu($defaults);
       ?>
-      <div class="search visible-lg">
-         <form method="get" id="searchform" class="form-inline" action="<?php bloginfo('url'); ?>">
-            <input class="form-control" type="text" name="s" id="s" placeholder="搜索..." />
-            <button type="submit" class="btn btn-danger btn-small" name="submit" ><i class="icon-search"></i></button>
-         </form>
-      </div>
+      <?php if(dynamic_sidebar('搜索框')) {?>
+        <div class="search visible-lg">
+           <form method="get" id="searchform" class="form-inline" action="<?php bloginfo('url'); ?>">
+              <input class="form-control" type="text" name="s" id="s" placeholder="搜索..." />
+              <button type="submit" class="btn btn-danger btn-small" name="submit" ><i class="icon-search"></i></button>
+           </form>
+        </div>
+      <?php };?>
     </div>
   </nav>
   <div id="if-fixed" class="pull-right visible-lg">
