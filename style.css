@@ -168,12 +168,12 @@ div[class*="success"] .badge {
  }
 
  /*搜索框*/
- .search{
+div.search{
  	float: right;	
  	padding: 10px 0;
  }
 
- .search input[type="text"] {
+div.search input[type="text"] {
  	width: 180px;
  }
 
