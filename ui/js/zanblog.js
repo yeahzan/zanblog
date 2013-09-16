@@ -14,6 +14,7 @@ jQuery(function () {
 	panelClose();
 	btnLoading();
 	preLoadImg();
+	setImgHeight();
 
     jQuery('#myTab a:last').tab('show');
 
@@ -134,7 +135,29 @@ jQuery(function () {
 		    "wp-content/themes/zanblog/ui/images/arrow_hover.png"
 		];
 
-		preloadImages(imageURLs);
+		if (!imageURLs.length) preloadImages(imageURLs);
 
+	}
+
+	/**
+	 * Set img auto height to adapt screen.
+	 */
+	function setImgHeight() {
+
+		var img = jQuery(".centent-article p").find("img");
+
+		img.each(function() {
+
+			var $this = jQuery(this);
+			var attrWidth = $this.attr("width");
+			var attrHeight = $this.attr("height");
+			var width = $this.width();
+
+			var scale = width / attrWidth;
+			var height = scale * attrHeight;
+
+			$this.css("height", height);
+
+		});
 	}
 });
