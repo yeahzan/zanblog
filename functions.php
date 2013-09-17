@@ -64,7 +64,7 @@ function zanblog_scripts_styles() {
   wp_enqueue_script( 'icheck-script', get_template_directory_uri() . '/ui/js/jquery.icheck.js', array('jquery'));
 
   // Add zanblog JavaScript file.
-  wp_enqueue_script( 'zanblog-script', get_template_directory_uri() . '/ui/js/zanblog.js', array('jquery'), '2.0.2');
+  wp_enqueue_script( 'zanblog-script', get_template_directory_uri() . '/ui/js/zanblog.min.js', array('jquery'), '2.0.2');
   
   // Add custom JavaScript file.
   wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/ui/js/custom.js', array('jquery'), '2.0.2');

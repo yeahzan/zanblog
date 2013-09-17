@@ -1,6 +1,6 @@
 <?php
 	/*
-	Template Name: 留言板页面
+	Template Name: Bug提交与意见反馈
 	*/
 ?>
 
@@ -17,14 +17,17 @@
 				        	bcn_display();
 				    	}
 				    ?>
-					<h2 class="gbook-title">欢迎在这里留下您对Zanblog的看法</h2>
-					<p>非常感谢您对Zanblog主题的使用与支持，如果您在使用主题的过程中遇到任何问题，都可以在这里留言探讨。</p>
-					<p>我们会尽快为您答复。</p>
-					<p>也欢迎提出您的宝贵意见与建议，我们会根据反馈情况来进行下一个版本的开发与完善。</p>
+					<h3 class="gbook-title">欢迎在这里提交你所发现的Bug或者对Zanblog的意见反馈。</h3>
+					<br/>
+					<p>非常感谢您对Zanblog主题的使用与支持，如果您在使用主题过程中发现Bug，请以留言的形式在下方提出，核实之后我们会在新版本中修正。</p>
+					<br/>
+					<p>另外也欢迎在这里提出您的宝贵意见与建议，我们会根据反馈情况决定是否采纳，并且在新版本中加入。</p>
+					<br/>
+					<p><span style="color:#D56765">灌水及无意义留言将被删除，谢谢合作。</span></p>
+					<br/>
 	                <p>Zanblog官方群：223133969</p>
-	                <p>当前Zanblog最新版本 V2.0.1</p>
-					
-					<p><span style="color:#D56765">温馨提醒：</span>在下载主题之后请务必看一下<a href="http://www.yeahzan.com/zanblog/archives/131.html">使用说明</a>和<a href="http://www.yeahzan.com/zanblog/archives/289.html">改动日志</a>，常见问题都可以在那里得到答案。</p>
+					<br/>
+					<p><span style="color:#D56765">温馨提醒：</span>版本更新内容可以在“更新日志”栏目查看，请及时下载最新版本。</p>
 				</div>
 				<?php comments_template(); ?>
 			</div>
