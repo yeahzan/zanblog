@@ -1,29 +1,25 @@
 <?php
-
-
-add_action('admin_menu', 'option_page');
- 
-function option_page()
-{
-    if (count($_POST) > 0 && isset($_POST['zanblog_settings'])) {
-        $options = array('zanblog_keywords', 'zanblog_description', 'zanblog_analytics');
-        foreach ($options as $opt) {
-            delete_option($opt, $_POST[$opt]);
-            add_option($opt, $_POST[$opt]);
+    add_action('admin_menu', 'option_page');
+     
+    function option_page()
+    {
+        if (count($_POST) > 0 && isset($_POST['zanblog_settings'])) {
+            $options = array('zanblog_keywords', 'zanblog_description', 'zanblog_analytics');
+            foreach ($options as $opt) {
+                delete_option($opt, $_POST[$opt]);
+                add_option($opt, $_POST[$opt]);
+            }
         }
+        add_menu_page(__('Zanblog 选项'), __('Zanblog 选项'), 'edit_themes', basename(__FILE__), 'zanblog_settings');
     }
-    add_theme_page(__('主题选项'), __('Zanblog主题选项'), 'edit_themes', basename(__FILE__), 'zanblog_settings');
-}
- 
-function zanblog_settings()
-{
-
-
-    ?>
+     
+    function zanblog_settings()
+    {
+?>
  
 <style>
     .wrap, textarea, em {
-        font-family: 'Century Gothic', 'Microsoft YaHei', Verdana;
+        font-family: 'Microsoft YaHei', Verdana;
     }
  
     fieldset {
@@ -39,7 +35,6 @@ function zanblog_settings()
 
     fieldset  table  tr{
          border-bottom: 1px  dashed  #dcde22;
-
     }
  
     legend {
@@ -76,27 +71,25 @@ function zanblog_settings()
 </style>
  
 <div class="wrap">
-    <h2>主题选项</h2> 
+    <h2>Zanblog 选项</h2> 
     <form method="post" action="">
         <fieldset>
-            <legend><strong>SEO</strong></legend>
+            <legend><strong>SEO设置</strong></legend>
             <table class="form-table">
                 <tr>
                     <td>
-
-                        <textarea name="zanblog_keywords" id="zanblog_keywords" rows="1"
-                                  cols="70"><?php echo get_option('zanblog_keywords'); ?></textarea><br/>
-                                  <span>首页keywords标签</span>
-                        
+                        <textarea name="zanblog_keywords" id="zanblog_keywords" rows="1" cols="70">
+                            <?php echo get_option('zanblog_keywords'); ?>
+                        </textarea>
+                        <span>首页keywords标签</span>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        
-                        <textarea name="zanblog_description" id="zanblog_description" rows="3"
-                                  cols="70"><?php echo get_option('zanblog_description'); ?></textarea>
-                                  <span>首页description标签</span>
-                        
+                        <textarea name="zanblog_description" id="zanblog_description" rows="3" cols="70">
+                            <?php echo get_option('zanblog_description'); ?>
+                        </textarea>
+                        <span>首页description标签</span>
                     </td>
                 </tr>
             </table>
@@ -107,11 +100,10 @@ function zanblog_settings()
             <table class="form-table">
                 <tr>
                     <td>
-                        
-                        <textarea name="zanblog_analytics" id="zanblog_analytics" rows="5"
-                                  cols="70"><?php echo stripslashes(get_option('zanblog_analytics')); ?></textarea>
-                                  <span>记录网站数据</span>
-
+                        <textarea name="zanblog_analytics" id="zanblog_analytics" rows="5" cols="70">
+                            <?php echo stripslashes(get_option('zanblog_analytics')); ?>
+                        </textarea>
+                        <span>记录网站数据</span>
                     </td>
                 </tr>
             </table>
@@ -122,11 +114,8 @@ function zanblog_settings()
             <input type="submit" name="Submit" class="button-primary" value="保存设置"/>
             <input type="hidden" name="zanblog_settings" value="save" style="display:none;"/>
         </p>
-
     </form>
-    
-    <p>Theme by <a href="http://www.yeahzan.com">佚站互联</a></p>
-   
+    <p>Theme by <a href="http://www.yeahzan.com" target="_blank">佚站互联</a></p>
 </div>
  
 <?php
