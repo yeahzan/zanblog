@@ -58,19 +58,19 @@ add_action('after_setup_theme', 'zanblog_setup');
  */
 function zanblog_scripts_styles() {
   // Add Bootstrap JavaScript file.
-  wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/ui/js/bootstrap.min.js', array('jquery'), '3.0.0');
+  wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/ui/js/bootstrap.js', array('jquery'), '3.0.0');
 
   // Add icheck JavaScript file for iffixed.
   wp_enqueue_script( 'icheck-script', get_template_directory_uri() . '/ui/js/jquery.icheck.js', array('jquery'));
 
   // Add zanblog JavaScript file.
-  wp_enqueue_script( 'zanblog-script', get_template_directory_uri() . '/ui/js/zanblog.min.js', array('jquery'), '2.0.2');
+  wp_enqueue_script( 'zanblog-script', get_template_directory_uri() . '/ui/js/zanblog.min.js', array('jquery'), '2.0.3');
   
   // Add custom JavaScript file.
-  wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/ui/js/custom.js', array('jquery'), '2.0.2');
+  wp_enqueue_script( 'custom-script', get_template_directory_uri() . '/ui/js/custom.js', array('jquery'), '2.0.3');
 
   // Add zanblog main css.
-  wp_enqueue_style( 'zanblog-style', get_stylesheet_uri(), array(), '2.0.2');
+  wp_enqueue_style( 'zanblog-style', get_stylesheet_uri(), array(), '2.0.3');
 
   // Add Bootstrap css.
   wp_enqueue_style( 'bootstrap-style', get_template_directory_uri() . '/ui/css/bootstrap.css', array(), '3.0.0');
@@ -82,7 +82,7 @@ function zanblog_scripts_styles() {
   wp_enqueue_style( 'icheck-style', get_template_directory_uri() . '/ui/css/flat/red.css', array());
 
   // Add Custom css.
-  wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/ui/css/custom.css', array(), '2.0.2');
+  wp_enqueue_style( 'custom-style', get_template_directory_uri() . '/ui/css/custom.css', array(), '2.0.3');
 }
 add_action('wp_enqueue_scripts', 'zanblog_scripts_styles');
 

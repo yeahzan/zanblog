@@ -4,7 +4,7 @@ Theme URI: http://www.yeahzan.com/zanblog
 Description: 基于Bootstrap3.0的WordPress主题
 Author: 佚站互联
 Author URI: http://www.yeahzan.com/
-Version: 2.0.1
+Version: 2.0.3
 Tags: Bootstrap3, 扁平化设计, 精致简约
 */
 
@@ -50,10 +50,6 @@ ul{
 .panel .tab-content a:hover,
 .panel .nav-pills a:hover {
 	color: #ffffff;
-}
-
-.panel .tab-content ul.children a {
-	padding: 20px;
 }
 
 .panel .tab-content ul.children a:hover {
