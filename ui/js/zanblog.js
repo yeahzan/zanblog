@@ -23,22 +23,42 @@ jQuery(function () {
 	 */
     function topFixed() {
 
-    	zanHeader = jQuery("#zan-header");
-    	body = jQuery("body");
-    	ifFixed = zanHeader.find("input[type='checkbox']");
+
+    	var zanHeader = jQuery('#zan-header');
+    	var body = jQuery('body');
+    	var ifFixed = zanHeader.find('input[type="checkbox"]');
+    	var storage = window.localStorage;
+
+    	if(!storage.getItem('ifFixed')) {
+
+    		storage.setItem('ifFixed', 'float');
+    	} else {
+    		if(storage.getItem('ifFixed') == 'fixed') {
+
+		  		zanHeader.addClass('navbar-fixed-top');
+		  		body.addClass('nav-fixed');
+		  		ifFixed.iCheck('check');
+    		} else {
+
+    			zanHeader.removeClass('navbar-fixed-top');
+		  		body.removeClass('nav-fixed');
+		  		ifFixed.iCheck('uncheck');
+    		}
+    	}
 
 	    ifFixed.iCheck({
-	    	checkboxClass: 'icheckbox_flat-red',
-	    	radioClass: 'iradio_flat-red'
+	    	checkboxClass: 'icheckbox_flat-red'
 	  	});
 
 	  	ifFixed.on('ifChecked', function(event){
-		  	zanHeader.addClass("navbar-fixed-top");
-		  	body.addClass("nav-fixed");
+		  	zanHeader.addClass('navbar-fixed-top');
+		  	body.addClass('nav-fixed');
+		  	storage.setItem('ifFixed', 'fixed');
 
 		}).on('ifUnchecked', function(event) {
-			zanHeader.removeClass("navbar-fixed-top");
-		  	body.removeClass("nav-fixed");
+			zanHeader.removeClass('navbar-fixed-top');
+		  	body.removeClass('nav-fixed');
+		  	storage.setItem('ifFixed', 'float');
 		});
 	}
 
@@ -47,12 +67,12 @@ jQuery(function () {
 	 */
 	function dropDown() {
 
-		dropDownLi = jQuery("li.dropdown");
+		var dropDownLi = jQuery('li.dropdown');
 
 		dropDownLi.mouseover(function() {
-			jQuery(this).addClass("open");
+			jQuery(this).addClass('open');
 		}).mouseout(function() {
-			jQuery(this).removeClass("open");
+			jQuery(this).removeClass('open');
 		});
 	}
 
@@ -61,23 +81,24 @@ jQuery(function () {
 	 */
 	function panelToggle () {
 		
-		var toggleBtn = jQuery(".panel-toggle");
-		toggleBtn.data("toggle", true);
+		var toggleBtn = jQuery('.panel-toggle');
+
+		toggleBtn.data('toggle', true);
 
 		toggleBtn.click(function() {
 
 			var btn = jQuery(this);
 
-			if(btn.data("toggle")) {
+			if(btn.data('toggle')) {
 
-				btn.removeClass("icon-chevron-sign-up").addClass("icon-chevron-sign-down");
-				btn.parents("div.panel").addClass("toggled");
-				btn.data("toggle", false);
+				btn.removeClass('icon-chevron-sign-up').addClass('icon-chevron-sign-down');
+				btn.parents('div.panel').addClass('toggled');
+				btn.data('toggle', false);
 			} else {
 
-				btn.removeClass("icon-chevron-sign-down").addClass("icon-chevron-sign-up");
-				btn.parents("div.panel").removeClass("toggled");
-				btn.data("toggle", true);
+				btn.removeClass('icon-chevron-sign-down').addClass('icon-chevron-sign-up');
+				btn.parents('div.panel').removeClass('toggled');
+				btn.data('toggle', true);
 			}
 
 		});
@@ -88,13 +109,13 @@ jQuery(function () {
 	 */
 	function panelClose() {
 
-		var closeBtn = jQuery(".panel-remove");
+		var closeBtn = jQuery('.panel-remove');
 
 		closeBtn.click(function() {
 
 			var btn = jQuery(this);
 
-			btn.parents(".panel").toggle(300);
+			btn.parents('.panel').toggle(300);
 			
 		});
 	}
@@ -104,14 +125,14 @@ jQuery(function () {
 	 */
 	function btnLoading() {
 
-		var loadBtn = jQuery("#load-more");
-		var loadData = loadBtn.attr("load-data");
+		var loadBtn = jQuery('#load-more');
+		var loadData = loadBtn.attr('load-data');
 
 		loadBtn.click(function() {
 
-			loadBtn.addClass("disabled");
-			loadBtn.find("i").addClass("icon-spin icon-spinner");
-			loadBtn.find("attr").text(loadData);
+			loadBtn.addClass('disabled');
+			loadBtn.find('i').addClass('icon-spin icon-spinner');
+			loadBtn.find('attr').text(loadData);
 		})
 	}
 
@@ -132,7 +153,7 @@ jQuery(function () {
 		}
 
 		var imageURLs = [
-		    "wp-content/themes/zanblog/ui/images/arrow_hover.png"
+		    'wp-content/themes/zanblog/ui/images/arrow_hover.png'
 		];
 
 		if (!imageURLs.length) preloadImages(imageURLs);
@@ -144,19 +165,19 @@ jQuery(function () {
 	 */
 	function setImgHeight() {
 
-		var img = jQuery(".centent-article p").find("img");
+		var img = jQuery('.centent-article p').find('img');
 
 		img.each(function() {
 
 			var $this = jQuery(this);
-			var attrWidth = $this.attr("width");
-			var attrHeight = $this.attr("height");
+			var attrWidth = $this.attr('width');
+			var attrHeight = $this.attr('height');
 			var width = $this.width();
 
 			var scale = width / attrWidth;
 			var height = scale * attrHeight;
 
-			$this.css("height", height);
+			$this.css('height', height);
 
 		});
 	}
