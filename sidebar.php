@@ -55,7 +55,7 @@
 		  <li class="active"><a href="#sidebar-categories" data-toggle="tab">分类目录</a></li>
 		  <li><a href="#sidebar-tags" data-toggle="tab">热门标签</a></li>
 		  <?php if ( is_home() ) { ?>
-		  <li class="visible-lg"><a href="#sidebar-links" data-toggle="tab">友情链接</a></li>
+		  <li><a href="#sidebar-links" data-toggle="tab">友情链接</a></li>
 		  <?php } ?>
 		</ul>
 

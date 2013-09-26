@@ -21,11 +21,11 @@
 			<br/>
 			<p class="alert alert-danger">使用过程中碰到问题请务必查看常见问题、更新日志以及使用视频，雷同问题我们不会做任何解答。<p>
 			<p>
-				<a class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 3.0.0']);" href="http://pan.baidu.com/share/link?shareid=1525604429&uk=3291201722" target="_blank">主题下载</a>
+				<a class="btn btn-large" href="http://pan.baidu.com/share/link?shareid=3576155616&uk=3291201722" target="_blank">主题下载</a>
 			
-				<a class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 3.0.0']);" href="http://www.yeahzan.com/zanblog/archives/394.html">常见问题</a>
+				<a class="btn btn-large" href="http://www.yeahzan.com/zanblog/archives/394.html">常见问题</a>
 
-				<a class="btn btn-large" onclick="_gaq.push(['_trackEvent', 'Jumbotron actions', 'Download', 'Download 3.0.0']);" href="http://www.yeahzan.com/zanblog/archives/496.html">指导视频</a>
+				<a class="btn btn-large" href="http://www.yeahzan.com/zanblog/archives/496.html">指导视频</a>
 			</p>
 		</div>
 	</div>
