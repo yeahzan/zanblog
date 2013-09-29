@@ -4596,9 +4596,11 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus {
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .current-menu-parent > a,
+.navbar-inverse .navbar-nav > .current-menu-item > a {
   color: #ffffff;
-  background-color: #d9534f;
+  background-color: #d9534f !important;
 }
 
 .navbar-inverse .navbar-nav > .disabled > a,
@@ -5046,6 +5048,8 @@ a.list-group-item.active > .badge,
   line-height: 1.428571429;
   background-color: #ffffff;
   border-radius: 4px;
+  text-align: center;
+  
   -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
 }
