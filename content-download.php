@@ -21,7 +21,9 @@
 			<br/>
 			<p class="alert alert-danger">使用过程中碰到问题请务必查看常见问题、更新日志以及使用视频，雷同问题我们不会做任何解答。<p>
 			<p>
-				<a class="btn btn-large" href="http://pan.baidu.com/share/link?shareid=3576155616&uk=3291201722" target="_blank">主题下载</a>
+				<a class="btn btn-large" href="http://pan.baidu.com/s/19Ubc2" target="_blank">主题下载</a>
+
+				<a class="btn btn-large" href="http://pan.baidu.com/s/1zfeNp" target="_blank">完整插件包</a>
 			
 				<a class="btn btn-large" href="http://www.yeahzan.com/zanblog/archives/394.html">常见问题</a>
 
